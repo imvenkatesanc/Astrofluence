@@ -1,0 +1,117 @@
+@use "../global/" as *;
+
+.mobile-menu {
+  font-size: 2.3rem;
+  cursor: pointer;
+  display: none;
+
+  &:hover {
+    color: $header-color;
+    transition: all 0.3s;
+  }
+
+  @media (max-width: 900px) {
+    display: flex;
+  }
+}
+
+.closed-menu {
+  left: -100% !important;
+}
+
+.open-menu {
+  left: 0 !important;
+}
+
+.mobile-nav {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  z-index: 300;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+
+  span {
+    font-size: 3.3rem;
+    position: absolute;
+    top: 2rem;
+    right: 4rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $header-color;
+      transition: all 0.3s;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    font-size: 2.3rem;
+    list-style: none;
+
+    a {
+      color: $title-color;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        color: $header-color;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+
+nav {
+  font-size: $text-size;
+  width: 100%;
+  height: auto;
+  padding: 25px 40px 25px 50px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background-color: $background-color;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 9%);
+  z-index: 200;
+  align-items: center;
+
+  @media (max-width: 400px) {
+    padding: 25px 30px 25px 30px;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+
+    a {
+      color: $black-shade;
+      text-decoration: none;
+      transition: all 0.23s;
+      font-weight: 600;
+
+      @media (max-width: 900px) {
+        display: none;
+      }
+
+      &:hover {
+        color: $header-color;
+      }
+    }
+  }
+}
+
+.logo {
+  cursor: pointer;
+  color: $black-shade;
+}

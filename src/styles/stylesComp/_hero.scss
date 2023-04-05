@@ -1,0 +1,235 @@
+@use "../global/" as *;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: $gray-bg-color;
+  position: relative;
+
+  @media (max-width: 900px) {
+    height: auto;
+    padding: 11rem 0;
+  }
+}
+
+.hero-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  position: relative;
+
+  @media (max-width: 900px) {
+    flex-direction: column-reverse;
+    text-align: center;
+    height: auto;
+    gap: 3rem;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65rem;
+  gap: 10rem;
+  position: relative;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    gap: 3rem;
+  }
+
+  @media (min-width: 1600px) {
+    margin-top: 6rem;
+  }
+
+  @media (min-width: 1900px) {
+    margin-top: 10rem;
+  }
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+  position: relative;
+
+  h1 {
+    font-size: $hero-size;
+    line-height: 1.2;
+    color: $black-shade;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+
+    @media (max-width: 500px) {
+      font-size: 4rem;
+    }
+  }
+
+  p {
+    font-size: $hero-text-size;
+    font-weight: 500;
+    color: $text-color;
+    font-family: $text-font;
+    line-height: 1.6;
+
+    @media (max-width: 900px) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  span {
+    display: flex;
+    gap: 1.3rem;
+    margin: 2.5rem 0;
+    cursor: pointer;
+
+    a {
+      font-size: 3rem;
+      color: $black-shade;
+    }
+
+    @media (max-width: 900px) {
+      justify-content: center;
+      margin-top: -2rem;
+      margin-bottom: 4rem;
+      gap: 1.6rem;
+    }
+
+    i {
+      transition: all 0.2s;
+      &:hover {
+        color: $header-color;
+      }
+    }
+  }
+
+  img {
+    position: absolute;
+    width: 6rem;
+    top: 8.7rem;
+    right: 13rem;
+
+    @media (max-width: 900px) {
+      right: 3rem;
+    }
+
+    @media (max-width: 500px) {
+      top: 6.4rem;
+      right: 4rem;
+      width: 4.5rem;
+    }
+
+    @media (max-width: 400px) {
+      right: 3rem;
+    }
+
+    @media (max-width: 380px) {
+      right: 3rem;
+    }
+
+    @media (max-width: 375px) {
+      right: 1.7rem;
+    }
+  }
+}
+
+.hero-img {
+  background-image: url("/src/images/heropfp.png");
+  width: 35rem;
+  height: 35rem;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 3px solid $black-shade;
+
+  @media (max-width: 500px) {
+    width: 28rem;
+    height: 28rem;
+  }
+
+  animation: morph 8s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  position: relative;
+  transition: all 1s ease-in-out;
+
+  @keyframes morph {
+    0% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+
+    100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+  }
+}
+
+.skills {
+  display: flex;
+  font-size: $text-size;
+  color: $text-color;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  @media (max-width: 900px) {
+    position: initial;
+    flex-direction: column;
+  }
+
+  p {
+    margin-right: 7rem;
+    padding-right: 2rem;
+    border-right: 2px solid rgb(45, 46, 50, 0.5);
+    font-family: $text-font;
+    font-weight: 600;
+    color: $black-shade;
+
+    @media (max-width: 900px) {
+      margin-right: 0;
+      margin-bottom: 3rem;
+      border-bottom: 2px solid rgb(45, 46, 50, 0.5);
+      border-right: none;
+      padding-right: 0;
+      padding-bottom: 1rem;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+
+    @media (max-width: 900px) {
+      justify-content: center;
+    }
+
+    li {
+      width: 6.5rem;
+      height: 6.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: white;
+      box-shadow: 0px 0px 10px rgb(0 0 0 / 9%);
+      cursor: pointer;
+
+      img {
+        width: 3.4rem;
+        height: auto;
+      }
+    }
+  }
+}

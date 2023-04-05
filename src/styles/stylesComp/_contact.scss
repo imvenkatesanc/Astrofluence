@@ -1,0 +1,94 @@
+@use "../global/" as *;
+
+.contact {
+  background-color: white;
+  padding: 11rem 0;
+
+  @media (max-width: 1020px) {
+    padding: 8rem 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @media (max-width: 750px) {
+      text-align: center;
+    }
+
+    p {
+      color: $header-color;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: $text-size;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: $black-shade;
+      font-size: $headings-size;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 8rem;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+
+    @media (max-width: 750px) {
+      flex-direction: column;
+      gap: 5rem;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &__icon-box {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    @media (max-width: 750px) {
+      flex-direction: column;
+    }
+
+    span {
+      background-color: white;
+      padding: 2.3rem;
+      box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+      border-radius: 50%;
+
+      i {
+        font-size: 3rem;
+        color: $header-color;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    h3 {
+      font-size: $text-size;
+      color: $black-shade;
+    }
+
+    a,
+    p {
+      font-size: $text-size;
+      color: $text-color;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        color: $header-color;
+        transition: all 0.3s;
+      }
+    }
+  }
+}

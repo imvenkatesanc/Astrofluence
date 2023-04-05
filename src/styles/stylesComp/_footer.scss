@@ -1,0 +1,40 @@
+@use "../global/" as *;
+
+footer {
+  background-color: #2d2e32;
+  padding: 5rem 0;
+  width: 100%;
+
+  h3 {
+    font-size: $text-size;
+    color: white;
+  }
+}
+
+.footerc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 550px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 2rem;
+
+    i {
+      font-size: 2.3rem;
+      color: white;
+
+      &:hover {
+        transform: scale(1.2);
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+}
