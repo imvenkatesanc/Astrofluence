@@ -1,0 +1,85 @@
+/* InternAdd.css */
+.intern-add-form {
+    margin-left: 40px;
+    margin-top: 16rem;
+    border-radius: 6px;
+    background-color: none;
+  }
+  .intern-add-form>h2{
+    justify-content: center;
+    text-align: center;
+    color: black;
+  }
+.add-icon{
+    width: 54px;
+    height: 54px;
+    margin-top: 0%;
+    margin-left: 47%;
+    border-radius: 50px;
+    background-color: green;
+}
+.add-icon>i{
+  margin-left: 12px;
+  margin-top: 10px;
+  font-size: 35px;
+  color: black;
+}
+  .intern-add-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    padding: 10px;
+    margin-right: 10px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #989898;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  button[type="submit"] {
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 40%;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #007BFF;
+  }
+  
+  /* Loading spinner */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #007BFF;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  

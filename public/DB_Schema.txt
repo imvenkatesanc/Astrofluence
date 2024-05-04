@@ -1,0 +1,40 @@
+Table: StartupFounders
+
+| Column Name         | Data Type    | Description                                             |
+|---------------------|--------------|---------------------------------------------------------|
+| FounderID           | INT          | Primary key, unique identifier for each founder         |
+| Name                | VARCHAR(100) | Full name of the startup founder                        |
+| Email               | VARCHAR(100) | Email address of the startup founder                    |
+| IndustryVertical    | VARCHAR(50)  | Industry vertical of the startup (e.g., Tech, Healthcare, E-commerce) |
+| StartupStage        | VARCHAR(50)  | Stage of the startup (e.g., Ideation, Seed, Early-stage, Growth) |
+| Location            | VARCHAR(100) | Geographical location of the startup founder (e.g., City, Country) |
+| Age                 | INT          | Age of the startup founder                              |
+| Gender              | VARCHAR(10)  | Gender of the startup founder (optional)                |
+| EducationLevel      | VARCHAR(50)  | Education level of the startup founder (optional)       |
+| Interests           | TEXT         | Interests and preferences of the startup founder        |
+| SocialMedia         | VARCHAR(100) | Social media profiles of the startup founder            |
+| FollowerDemographics| TEXT         | Demographic details of the startup founder's followers  |
+| NetworkingEvents    | TEXT         | Upcoming industry events, conferences, etc.             |
+| Challenges          | TEXT         | Challenges and pain points faced by the startup founder |
+
+
+
+
+Table: Influencers
+
+| Column Name       | Data Type    | Description                                             |
+|-------------------|--------------|---------------------------------------------------------|
+| InfluencerID      | INT          | Primary key, unique identifier for each influencer      |
+| Name              | VARCHAR(100) | Full name of the influencer                             |
+| Email             | VARCHAR(100) | Email address of the influencer                         |
+| IndustryFocus     | VARCHAR(50)  | Industry focus of the influencer (e.g., Tech, Fashion, Food) |
+| Location          | VARCHAR(100) | Geographical location of the influencer (e.g., City, Country) |
+| Age               | INT          | Age of the influencer                                   |
+| Gender            | VARCHAR(10)  | Gender of the influencer (optional)                     |
+| SocialMedia       | VARCHAR(100) | Social media profiles of the influencer                  |
+| Followers         | INT          | Number of followers/fans of the influencer              |
+| EngagementRate    | FLOAT        | Engagement rate of the influencer's content             |
+| PreferredPlatforms| TEXT         | Preferred social media platforms for outreach           |
+| ContentFocus      | TEXT         | Content focus or niche of the influencer                |
+| PreviousInteractions | TEXT      | Details of previous interactions with startup founders  |
+| Strategies        | TEXT         | Outreach strategies employed by the influencer          |

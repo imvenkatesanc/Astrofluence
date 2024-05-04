@@ -1,0 +1,94 @@
+:root {
+    --cardWidth: 265px;
+    --cardHeight: 385px;
+    --cardMargin: 25px;
+  }
+  
+  /* InternCard.css */
+  .id{
+    float: left;
+  }
+  
+  .intern-card-list-container{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-wrap: wrap;
+    margin-top: 100px;
+    margin-left: 300px;
+  }
+  
+  .intern-card {
+    width: var(--cardWidth);
+    height: var(--cardHeight);
+    margin: var(--cardMargin);
+    border: 1px solid #c2c2c2;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color:#063970;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    background-color: none;
+  }
+  
+  .intern-card>.profile-image {
+    width: 90px; 
+    height: 90px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-left: 9px;
+    margin-top: 9px;
+    border: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .intern-card:hover {
+    transform: scale(0.99); /* Add a scaling effect on hover */
+    background-color: #ccc;
+  }
+  
+  .intern-card h2 {
+    font-size: 18px;
+    margin: 5px 0;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .intern-card p {
+    font-size: 14px;
+    margin: 7px 0;
+    font-weight: 400;
+    padding: 5px;
+    text-indent: 9px;
+  }
+  
+  /* CSS for changing Font Awesome icon colors */
+  .icon-email {
+    color: blue; /* Change to your desired color */
+  }
+  
+  .icon-department {
+    color: green; /* Change to your desired color */
+  }
+  
+  .icon-gender {
+    color: purple; /* Change to your desired color */
+  }
+  
+  .icon-phone {
+    color: red; /* Change to your desired color */
+  }
+  
+  .icon-role {
+    color: orange; /* Change to your desired color */
+  }
+  
+  .icon-address {
+    color: teal; /* Change to your desired color */
+  }
+  
+  #out-off{
+    margin-top: 40vh;
+    margin-right: 40vh;
+    font-size: 16px;
+  }

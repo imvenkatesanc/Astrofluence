@@ -1,0 +1,77 @@
+/* Reset default styles */
+body, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Dashboard container styles */
+.dashboard-container {
+  display: flex;
+}
+
+.off-nav {
+  width: auto;
+  top: auto;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: #005eff;
+  color: #fff;
+  width: 70px;
+  padding-top: 20px;
+  height: 100vh; /* Set height to 100% of the viewport height */
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+  text-indent: 25px;
+  position: fixed;
+  top: 11%; /* Align to the top of the viewport */
+  left: 0; /* Align to the left of the viewport */
+  z-index: 1000; /* Ensure sidebar is above other content */
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+}
+
+.sidebar-header #sidebar-toggle {
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 21px;
+}
+
+.sidebar-header:hover,#sidebar-toggle:hover{
+  color:rgb(200, 200, 200);
+}
+/* Navigation styles */
+.nav {
+  padding-left: 20px;
+}
+
+.nav-item {
+  margin-bottom: 60px; /* Adjust margin between each navigation item */
+}
+
+.nav-link {
+  display: flex;
+  align-items: flex-end;
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-link .svg-inline--fa {
+  font-size: 30px;
+}

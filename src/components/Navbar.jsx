@@ -1,4 +1,11 @@
 import { React, useState } from "react";
+import { Link } from "react-router-dom";
+import Hero from './Hero';
+import AboutMe from './AboutMe';
+import Trynow from './Trynow';
+import Product from './Product';
+import Contact from './Contact';
+import Footer from './Footer';
 
 function Navbar() {
   const [hamburger, setHamburger] = useState(false);
@@ -15,7 +22,8 @@ function Navbar() {
     <>
       <nav>
         <h3 onClick={pageUp} className="logo">
-          Venkatesan C
+          <img src='src/assets/flame.svg' alt="Logo" />
+          Astrofluence
         </h3>
 
         <ul>
@@ -28,17 +36,15 @@ function Navbar() {
           </li>
 
           <li>
-            <a href="#projects">Projects</a>
-          </li>
-
-          <li>
-            <a href="#education">Education</a>
+            <a href="#product">Product</a>
           </li>
 
           <li>
             <a href="#contact">Contact</a>
           </li>
-
+          <li>
+            <Link to="/whoyouare"><a className="nav-button">Try now!</a></Link>
+          </li>
           <li onClick={() => hamburgerMenu()}>
             <i className="fa-solid fa-bars-staggered mobile-menu"></i>
           </li>
@@ -61,11 +67,7 @@ function Navbar() {
           </li>
 
           <li onClick={() => hamburgerMenu()}>
-            <a href="#projects">Projects</a>
-          </li>
-
-          <li onClick={() => hamburgerMenu()}>
-            <a href="#education">Education</a>
+            <a href="#product">Product</a>
           </li>
 
           <li onClick={() => hamburgerMenu()}>
@@ -73,6 +75,12 @@ function Navbar() {
           </li>
         </ul>
       </div>
+      <Hero/>
+      <AboutMe/>
+      <Trynow/>
+      <Product/>
+      <Contact/>
+      <Footer/>
     </>
   );
 }

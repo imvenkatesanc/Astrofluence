@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  max-width: 107rem;
+  max-width: 120rem;
   margin: 0 auto;
   padding: 0 4rem;
 }
@@ -149,7 +149,11 @@ nav ul {
   list-style: none;
   gap: 2rem;
 }
-nav ul a {
+nav ul a {.logo img {
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
   color: #2d2e32;
   text-decoration: none;
   transition: all 0.23s;
@@ -167,6 +171,10 @@ nav ul a:hover {
 .logo {
   cursor: pointer;
   color: #2d2e32;
+}
+.logo img{
+  width: auto; /* Adjust the width as needed */
+  height: 40px; /* Maintain aspect ratio */
 }
 
 .hero {
@@ -188,7 +196,7 @@ nav ul a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10rem;
+  gap: 15rem;
   position: relative;
 }
 @media (max-width: 900px) {
@@ -233,12 +241,15 @@ nav ul a:hover {
   max-width: 50rem;
   position: relative;
 }
+.hero-text > h1 >b{
+  color: #147efb;
+} 
 .hero-text h1 {
-  font-size: 5.5rem;
-  line-height: 1.2;
+  font-size: 4rem;
+  line-height: 1.4;
   color: #2d2e32;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
 }
 @media (max-width: 500px) {
   .hero-text h1 {
@@ -316,17 +327,14 @@ nav ul a:hover {
 }
 
 .hero-img {
-  background-image: url("./assets/hero.jpg");
-  width: 35rem;
-  height: 35rem;
+  background-image: url("./assets/slide_5.png");
+  width: 40rem;
+  height: 40rem;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  border: 3px solid #2d2e32;
-  animation: morph 8s ease-in-out infinite;
-  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   position: relative;
-  transition: all 1s ease-in-out;
+  transition: all 5s ease-in-out;
 }
 @media (max-width: 500px) {
   .hero-img {
@@ -345,6 +353,7 @@ nav ul a:hover {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 }
+
 
 .skills {
   display: flex;
@@ -421,6 +430,7 @@ nav ul a:hover {
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0;
 }
 @media (max-width: 1020px) {
   .about-content {
@@ -568,6 +578,7 @@ nav ul a:hover {
 
 .project-content {
   display: flex;
+  margin-top: 29rem;
   flex-direction: column;
 }
 @media (max-width: 600px) {
@@ -642,7 +653,7 @@ nav ul a:hover {
 }
 .projects-grid .pro__text {
   display: flex;
-  width: 30rem;
+  width: 40rem;
   height: auto;
   flex-direction: column;
   text-align: center;
@@ -667,7 +678,7 @@ nav ul a:hover {
 .projects-grid .pro__text h3 {
   font-size: 1.7rem;
   text-transform: uppercase;
-  color: #2d2e32;
+  color: #147efb;
   margin-bottom: 2rem;
   position: relative;
 }
@@ -853,4 +864,230 @@ footer h3 {
 .footerc__socials i:hover {
   transform: scale(1.2);
   transition: all 0.2s ease-in-out;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/* navbar trynow */
+
+.nav-button {
+  transition: all .3s cubic-bezier(.69, 0, .185, 1);
+  border-radius: 30px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  padding: 7px 16px;
+  line-height: 1;
+  color: #fff;
+  display: inline-block;
+  background: #005eff;
+  border: 1px solid #005eff;
+  text-decoration: none;
+}
+
+.nav-button:hover {
+  background: #edf3f8;
+  color: #212121;
+}
+
+/* contact */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+body{
+  background: #f1f1f1;
+}
+h1 {
+    text-align: center;
+    color: #a8a8a8;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
+}
+
+form {
+    max-width: 600px;
+    text-align: center;
+    margin: 75px auto;
+}
+
+input,
+textarea {
+    border: 0;
+    outline: 0;
+    padding: 1em;
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    font-family: 'Merriweather', sans-serif;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: 0 0px 2px rgb(60, 146, 231) !important;
+}
+
+#input-submit {
+    color: white;
+    background: #147efb;
+    cursor: pointer;
+}
+
+#input-submit:hover {
+    box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+}
+
+textarea {
+    height: 132px;
+}
+
+.half {
+    float: left;
+    width: 48%;
+    margin-bottom: 1em;
+}
+
+.right {
+    width: 50%;
+}
+
+.left {
+    margin-right: 2%;
+}
+
+@media (max-width: 480px) {
+    .half {
+        width: 100%;
+        float: none;
+        margin-bottom: 0;
+    }
+}
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+form > h1 {
+  color:#147efb;
+  font-size: 4rem;
+  padding-bottom: 1rem;
+  font-weight:700;
+}
+/* trynow */
+/* Trynow.css */
+
+.center-block {
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  top: 38%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+.title {
+  font-family: "Montserrat";
+  font-weight: 100;
+  font-size: 30px;
+  text-align: center;
+  color: #212121;
+  margin-top: 20px;
+}
+
+.logo-try {
+  display: block;
+  width: 26%;
+  min-width: 280px;
+  margin: 0 auto;
+}
+
+.button {
+  transition: all .3s cubic-bezier(.69, 0, .185, 1);
+  border-radius: 30px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  padding: 16px 40px;
+  line-height: 1;
+  color: #fff;
+  margin: 20px auto 0;
+  display: inline-block;
+  background: #005eff;
+  border: 1px solid #005eff;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #edf3f8;
+  color: #212121;
+}
+
+/* whoyouare select */
+:root {
+  --background-select: linear-gradient(to left, #98a6b3 3rem, #8095a9 3rem);
+}
+
+select {
+  appearance: none;
+  border: 0;
+  outline: 0;
+  background: none;
+  color: inherit;
+  box-shadow: none;
+}
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: min(20rem, 90vw);
+  background: var(--background-select);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  /* // Select style */
+  select {
+    flex: 1;
+    padding: 1em;
+    cursor: pointer;
+  }
+  /* // Arrow style */
+  &::after {
+    content: "\25BC";
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    transition: 0.25s all ease;
+    pointer-events: none;
+  }
+  /* // Arrow hover */
+  &:hover::after {
+    color: #147efb;
+    animation: bounce 0.5s infinite;
+  }
+}
+@keyframes bounce {
+  25% {
+    transform: translatey(5px);
+  }
+  75% {
+    transform: translatey(-5px);
+  }
+}

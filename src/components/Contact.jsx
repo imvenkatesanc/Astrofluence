@@ -1,41 +1,86 @@
+import React, { useState } from 'react';
+
 function Contact() {
-    return (
-      <>
-        <section id="contact" className="contact">
-          <div className="container">
-            <div className="contact__content">
-              <div className="contact__title">
-                <p>contact</p>
-                <h3>Don't be shy! Hit me up! 👇</h3>
-              </div>
-              <div className="contact__icons">
-                <div className="contact__icon-box">
-                  <span>
-                    <i className="fa-solid fa-map-location-dot"></i>
-                  </span>
-                  <div className="contact__info">
-                    <h3>Location</h3>
-                    <p>Chennai, India</p>
-                  </div>
-                </div>
-  
-                <div className="contact__icon-box">
-                  <span>
-                    <i className="fa-solid fa-envelope-open-text"></i>
-                  </span>
-                  <div className="contact__info">
-                    <h3>Mail</h3>
-                    <a href="mailto:venkatesanit2020@gmail.com">
-                      venkatesanit2020@gmail.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </>
-    );
-  }
-  
-  export default Contact;
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('http://localhost:4000/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+      if (response.ok) {
+        console.log('Form submitted successfully');
+        // Clear form data after successful submission if needed
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        console.error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+  };
+
+  return (
+    <form className="cf" onSubmit={handleSubmit} id='contact'>
+      <h1>Contact</h1>
+      <div className="half left cf">
+        <input
+          type="text"
+          id="input-name"
+          name="name"
+          placeholder="Name"
+          value={formData.name}
+          onChange={handleChange}
+        />
+        <input
+          type="email"
+          id="input-email"
+          name="email"
+          placeholder="Email address"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          id="input-subject"
+          name="subject"
+          placeholder="Subject"
+          value={formData.subject}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="half right cf">
+        <textarea
+          name="message"
+          id="input-message"
+          placeholder="Message"
+          value={formData.message}
+          onChange={handleChange}
+        ></textarea>
+      </div>
+      <input type="submit" value="Submit" id="input-submit" />
+    </form>
+  );
+}
+
+export default Contact;

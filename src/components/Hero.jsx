@@ -1,10 +1,6 @@
-import Waving from "../assets/waving.png";
-import Html from "../assets/html.svg";
-import Css from "../assets/css3.svg";
-import Js from "../assets/javascript.svg";
-import React from "../assets/react.svg";
-import Tailwind from "../assets/tailwind.svg";
-import Sass from "../assets/scss.svg";
+import React from 'react';
+import Slider from "./Slider";
+
 
 function Hero() {
   return (
@@ -14,11 +10,9 @@ function Hero() {
           <div className="content">
             <div className="hero-main">
               <div className="hero-text">
-                <h1>Front-end React Developer</h1>
-                <img src={Waving} alt="waving_hand" />
+                <h1><b>First ever &nbsp;</b>real-time data driven influencer economy</h1>
                 <p>
-                  Hi, I'm Venkatesan Chandirasekar. A passionate Front-end React
-                  Developer based in Chennai, India. 📍
+                Astrofluence offers self-serve end-to-end influencer marketing technology that delivers high ROI and omnichannel scale effortlessly. 📍
                 </p>
                 <span>
                   <a
@@ -45,32 +39,8 @@ function Hero() {
 
             {/*  */}
             <div className="skills">
-              <p>Tech Stack</p>
               <div className="logos">
-                <ul>
-                  <li>
-                    <img src={Html} title="HTML5" alt="program_img" />
-                  </li>
-                  <li>
-                    <img src={Css} title="CSS3" alt="program_img" />
-                  </li>
-                  <li>
-                    <img src={Js} title="Javascript" alt="program_img" />
-                  </li>
-                  <li>
-                    <img src={React} title="React JS" alt="program_img" />
-                  </li>
-                  <li>
-                    <img
-                      src={Tailwind}
-                      title="Tailwind CSS"
-                      alt="program_img"
-                    />
-                  </li>
-                  <li>
-                    <img src={Sass} title="Sass/Scss" alt="program_img" />
-                  </li>
-                </ul>
+                <Slider/>
               </div>
             </div>
           </div>
